@@ -39,6 +39,18 @@ const removerItem = (id)=> {
     let listaAux = listaPedidos.filter((pedido)=> pedido.id !==id);
     setPedidos(listaAux);
 }
+const removerCadaitem = (id) => {
+  const novaLista = listaAux.filter(
+(pedido, index)=>{
+if(index !== id){
+return pedido
+}else{
+return null;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+}
+}
+);
+setPedidos(novaLista);
+}
 
     return (
        <div className="bloco-principal">
@@ -64,7 +76,7 @@ const removerItem = (id)=> {
             <td>{produto.item}</td>
             <td>{produto.preco}</td>
             <td>
-                <button onClick={()=> removerItem(produto.id)}> Remover </button>
+                <button onClick={()=> removerItem(index)}> Remover </button>
             </td>
            
             </tr>
