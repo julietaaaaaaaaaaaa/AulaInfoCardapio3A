@@ -35,21 +35,21 @@ export default function App() {
         setPedidos([...listaPedidos,produto]);
       }
 console.table(listaPedidos);
-const removerItem = (id)=> {
-    let listaAux = listaPedidos.filter((pedido)=> pedido.id !==id);
-    setPedidos(listaAux);
-}
-const removerCadaitem = (id) => {
-  const novaLista = listaAux.filter(
-(pedido, index)=>{
-if(index !== id){
-return pedido
+
+const removerItem = (id) => {
+  let remover = false;
+  let listaAux = listaPedidos.filter((pedido)=>{
+if(pedido.id == id){
+  if(remover == true){
+
+
+  }
 }else{
-return null;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+     return null                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 }
 }
 );
-setPedidos(novaLista);
+setPedidos(listaAux);
 }
 
     return (
